@@ -6,9 +6,9 @@ import sys
 #import pandas as pd
 import json
 
-pydub_path = 'C:\\Users\\xeon\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\'
+pydub_path = ''
 sys.path.append(pydub_path)
-TG_BOT_TOKEN = '5846633600:AAGwVmw4aDSHm8sfsECvXOqVjZpm4L_pWvM'
+TG_BOT_TOKEN = 'токен телеграм бота'
 import os
 from aiogram import Bot, Dispatcher, executor, types
 from aiogram.types import  ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMarkup, InlineKeyboardButton
@@ -16,31 +16,6 @@ from aiogram.types import  ReplyKeyboardMarkup, KeyboardButton, InlineKeyboardMa
 class dataBase():
     def __init__(self):
         self.list_users = {} #self.init_db('filename.db')
-
-    # def init_db(self, nameDB):
-    #     df = pd.DataFrame()
-    #     if os.path.exists(nameDB):
-    #         conn = sqlite3.connect(nameDB, timeout=10)
-    #         try:
-    #             query = "SELECT * FROM users"
-    #             df = pd.read_sql_query(query, conn)
-    #         except Exception as ex:
-    #             print('Error db:',ex)
-    #         conn.close()
-    #     else:
-    #         conn = sqlite3.connect(nameDB, timeout=10)
-    #         cur = conn.cursor()
-    #         try:
-    #             columns = "userid, nickname, in_case, dt_in_case, out_case, dt_out_case, out_adres, current_case"
-    #             cur.execute('CREATE TABLE users ' + columns)
-    #             default_val = ['000000','default',0,'-',0,'-','...',0]
-    #             df = pd.DataFrame(default_val,columns=columns)
-    #         except Exception as ex:
-    #             print('Error create tab:', ex)
-    #     return df.to_dict()
-
-
-
 
 class TGBot:
     def __init__(self):
